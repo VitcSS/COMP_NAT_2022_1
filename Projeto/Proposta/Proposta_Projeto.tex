@@ -1,0 +1,92 @@
+%% ------------- Portuguese version ------------
+\documentclass{sbrt}
+\usepackage[english,brazil]{babel}
+\usepackage[utf8]{inputenc}
+\newtheorem{theorem}{Teorema}
+%% ---------------------------------------------
+
+%% If writing in English, remove the lines above
+%% and uncomment the lines below
+
+%% ------------- English version ---------------
+%\documentclass[english]{sbrt}
+%\usepackage[english]{babel}
+%\usepackage[utf8]{inputenc}
+%\newtheorem{theorem}{Theorem}
+%% ---------------------------------------------
+
+\begin{document}
+
+\title{Redes de Busca de Trajetória para Modelos de Programação Genética }
+
+\author{Clara Amorim Bacha de Almeida, Vítor Corrêa Silva
+% \thanks{teste}%
+}
+
+\maketitle
+
+% \markboth{teste}{}
+
+
+%% If writing in English, remove both 'resumo' and 'chave'
+%% ------------- Portuguese version ------------
+\begin{resumo}
+A proposta apresentada consiste na geração de grafos que representaram o funcionamento de um modelo de programação genética no espaço.
+Visando permitir a representação gráfica dos resultados obtidos e tomar o projeto computacionalmente eficiente, será executada uma redução 
+de dimensionalidade sobre as árvores o que trará estes dados para o espaço graficamente representável (até três dimensões).
+\end{resumo}
+\begin{chave}
+Search Trajectory Networks, Redução de Dimensionalidade, Programação Génetica
+\end{chave}
+%% ---------------------------------------------
+
+
+% \begin{abstract}
+% This document is an example of how to use the \LaTeX\ style sbrt.cls to prepare a paper for submission to SBrT~2022. The abstract must have at most 100 words.
+
+% For papers written in English, please drop both sections above (Resumo and Palavras-Chave).
+% \end{abstract}
+% \begin{keywords}
+% Paper template, \LaTeX, SBrT~2022.
+% \end{keywords}
+
+
+\section{Introdução}
+
+Quando se trabalha com com modelos de programação génetica, assim como em toda a área de computação natural, 
+não é tangível como o modelo se comporta do ponto de vista prático, deixando de lado as metafóras e analogias 
+e condiderando somente o processo computacional. Pensando isso Gabriela Ochoa, Katherine M. Malan e Christian 
+Blum desenvolveram o que chamaram de "Search Trajectory Networks" que iremos traduzir como "Redes de Busca de 
+Trajetória", essas redes são geradas átraves usando a saída da iteração como nó.
+
+Até o momento as redes foram implementadas visando seu uso em algoritmos em que a sáida é essencialmente 
+um valor númerico.  O objetivo deste trabalho será expandir esse conceito para modelos de programação 
+genética aonde a saída não se resume a um valor númerico mas sim a um método.
+
+\section{Metodologia}
+
+Uma das formas mais comuns de se representar um modelo de programação génetica é se utilizando de árvores, essa é a forma que 
+será a forma que será utilizada nesse trabalho. Árvores por natureza já podem ser implementadas graficamente em um espaço de 
+até três dimensões, entretanto como a árvore representa o que será referido como "reposta atual" do algoritmo para a iteração que 
+a gera. Para representar o comportamento de um dado algoritmo de programação genética será necessário de \(n\) árvores que representam
+a resposta atual de cada uma das \(n\) iterações.
+
+Sendo assim é necessário reduzir dimensionalmente a árvore para algo que possa ser representado como um ponto no espaço. Para isso será usado
+um algoritmo de redução de dimensionalidade, como por exemplo PCA,para tal redução. Com as árvores convertidas para pontos é possível então gerar
+um grafo direcionado que representará o comportamento do modelo. 
+
+
+\begin{thebibliography}{99}
+\bibitem{ref1} L. Lamport, \textit{A Document Preparation System: \LaTeX, User's
+Guide and Reference Manual}. Addison Wesley Publishing Company,
+1986.
+% \bibitem{ref2} F. C. Silva e J. J. Sousa, ``Esta referência é apenas um exemplo," ~\textit{Revista de Exemplos}, v. 5, pp. 52--55, Maio
+% 1999.
+\end{thebibliography}
+
+
+% \appendix
+% Inserir as informações referentes aos apêndices aqui.
+
+
+\end{document}
